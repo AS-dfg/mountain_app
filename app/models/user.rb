@@ -8,6 +8,7 @@ class User < ApplicationRecord
                                    dependent:   :destroy
   has_many :following, through: :active_relationships,  source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
+  has_many :likes, dependent: :destroy
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save   :downcase_email
   before_create :create_activation_digest
@@ -55,7 +56,7 @@ class User < ApplicationRecord
     update_attribute(:activated_at, Time.zone.now)
   end
 
-  # 有効化用のメールを送信する
+  #有効化用のメールを送信する
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
   end
@@ -111,5 +112,9 @@ class User < ApplicationRecord
     def create_activation_digest
       self.activation_token  = User.new_token
       self.activation_digest = User.digest(activation_token)
+      #update_attribute(:activated,    true)
+      #update_attribute(:activated_at, Time.zone.now)
+      
+      #self.activate
     end
 end

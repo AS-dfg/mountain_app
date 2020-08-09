@@ -1,3 +1,116 @@
-// Place all the styles related to the StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: "Hiragino Maru Gothic ProN", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.slide-wrapper {
+  text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+  color: #5e6f84;
+}
+
+.slide-title {
+  font-size: 45px;
+  margin-bottom: 20px;
+  color: #2f5634;
+}
+
+.change-btn-wrapper {
+  width: 500px;
+  margin: 20px auto;
+  font-size: 18px;
+}
+
+.change-btn-wrapper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.prev-btn {
+  cursor: pointer;
+  float: left;
+  display: none;
+  
+}
+
+.next-btn {
+  cursor: pointer;
+  float: right;
+}
+
+.slides {
+  background-size: cover;
+  padding: 0;
+}
+
+.slide {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.slide img {
+  width: 500px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.index-btn-wrapper {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.index-btn {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #81878a;
+  width: 40px;
+  padding: 6px 0;
+  margin: 0 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.index-btn:hover {
+  color: #fff;
+  background-color: #5cabd0;
+}
+
+.section-title {
+  border-bottom: 2px solid #ffffff;
+}
+
+.contents-item {
+  float: left;
+  width: 100%;
+  p {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  img {
+    text-align: left;
+    float: left;
+    background-size: cover;
+    padding: 5px;
+    width: 40%;
+    height: auto;
+    border-radius: 5px;
+  }
+}
+
+.txt-contents {
+  float: right;
+  display: inline-block;
+  margin: 0;
+  padding: 10px;
+  width: 60%;
+  font-size: 16px;
+  color: #5c4d63;
+}

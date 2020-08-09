@@ -12,23 +12,14 @@
       </section>
     </aside>
     <div class="col-md-8">
-      <h3>Micropost Feed</h3>
+      <h3>みんなのオススメ山（さん）をシェアしよう！！</h3>
       <%= render 'shared/feed' %>
     </div>
   </div>
 <% else %>
-  <div class="center jumbotron">
-    <h1>Welcome to the mountain App</h1>
-
-    <h2>
-      This is the home page for the
-      <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-      mountain application.
-    </h2>
-
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <div class="top-wrapper">
+    <h1>Welcome to the world of outdoors‼</h1>
+    <h2>さぁ、あなたのおすすめ山（さん）をシェアしよう！</h2>
+    <%= link_to "仲間入り!", signup_path, class: "btn btn-lg btn-primary" %>
   </div>
-
-  <%= link_to image_tag("rails.png", alt: "Rails logo"),
-              'http://rubyonrails.org/' %>
 <% end %>
