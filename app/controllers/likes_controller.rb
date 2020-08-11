@@ -13,7 +13,7 @@ class LikesController < ApplicationController
     @like = Like.find_by(user_id: current_user.id, micropost_id: params[:micropost_id])
     if @like.destroy
       flash[:success] = "いいね解除しました"
-      redirect_to "/users/#{params[:user]}"
+      redirect_to "/users/#{params[:id]}"
       #redirect_to root_path
     end
   end

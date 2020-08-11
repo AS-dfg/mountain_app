@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  #post "likes/:micropost_id/create", to: "likes#create", constraints: {micropost_id: /\d+/}, as: :likes_create
+  #post "likes/:micropost_id/delete", to: "likes#delete", constraints: {micropost_id: /\d+/}, as: :likes_delete
   resources :users do
     member do
       get :following, :followers
@@ -21,7 +23,7 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :microposts,          only: [:create, :destroy, :show] do
-    resources :likes, only: [:create, :destroy]
+    resources :likes,             only: [:create, :destroy]
   end
   resources :relationships,       only: [:create, :destroy]
 end
