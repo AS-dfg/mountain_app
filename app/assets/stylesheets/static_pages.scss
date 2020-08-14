@@ -58,8 +58,8 @@ ul {
 
 .slide img {
   width: 500px;
-  height: auto;
-  border-radius: 5px;
+  height: 350px;
+  object-fit: contain;
 }
 
 .index-btn-wrapper {
