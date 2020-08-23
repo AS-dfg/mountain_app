@@ -271,7 +271,7 @@ input {
 .microposts {
   list-style: none;
   padding: 0;
-  #width: 50em;
+  width: 50em;
   float: left;
   #display: table-cell;
   li {
@@ -299,6 +299,8 @@ input {
     float: left;
     margin-right: 10px;
     margin-top: 5px;
+    width: 70px;
+    height: 70px;
   }
 }
 
